@@ -1,0 +1,114 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:background="#3A3D40">
+	
+  
+
+        <FrameLayout
+            android:id="@+id/camera_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        
+        <ImageView
+            android:id="@+id/shadow_img"
+            android:contentDescription="@string/overlayImageText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/portrait_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:visibility="visible" >
+ 
+			<SeekBar
+		   		android:id="@+id/transparency_seekBar"
+		    	android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:layout_alignParentTop="true" />
+            
+			<Button
+		   		android:id="@+id/img_select"
+		    	android:layout_width="wrap_content"
+		   	 	android:layout_height="wrap_content"
+		    	android:layout_alignParentBottom="true"
+		    	android:layout_alignParentEnd="false"
+		    	android:layout_below="@null"
+		    	android:onClick="selectImage"
+		    	android:text="@string/img_select" />
+        
+        	<Button
+            	android:id="@+id/img_clear"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentBottom="true"
+            	android:layout_alignParentEnd="false"
+            	android:layout_below="@null"
+            	android:layout_toEndOf="@id/img_select"
+            	android:onClick="clearImage"
+            	android:text="@string/img_clear" />
+
+			<Button
+		    	android:id="@+id/button_capture"
+		    	android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:layout_alignParentBottom="true"
+		    	android:layout_alignParentEnd="true"
+		    	android:onClick="snapIt"
+		    	android:text="@string/Capture" />
+            
+        </RelativeLayout>		
+
+
+        <RelativeLayout
+            android:id="@+id/landscape_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+   		
+   		<SeekBar
+   		    android:id="@+id/transparency_seekBar_land"
+   		    android:layout_width="match_parent"
+   		    android:layout_height="wrap_content"
+   		    android:layout_alignParentTop="true" />
+		
+		<Button
+		    android:id="@+id/img_select_land"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="false"
+		    android:layout_alignParentEnd="true"
+		    android:layout_below="@id/transparency_seekBar_land"
+		    android:onClick="selectImage"
+		    android:text="@string/img_select" />
+        
+        <Button
+            android:id="@+id/img_clear_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/img_select_land"
+            android:layout_toEndOf="@null"
+            android:onClick="clearImage"
+            android:text="@string/img_clear" />
+
+		<Button
+		    android:id="@+id/button_capture_land"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:layout_alignParentEnd="true"
+		    android:onClick="snapIt"
+		    android:text="@string/Capture" />
+            
+        </RelativeLayout>		
+        
+        
+</FrameLayout>

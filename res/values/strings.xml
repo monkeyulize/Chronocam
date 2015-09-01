@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Photo Time Machine</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+	<string name="Capture">Capture</string>
+	<string name="img_select">Select</string>
+	<string name="img_clear">Clear</string>
+	
+	<string name="overlayImageText">Transparent overlay image</string>
+	
+	<string name="pref_imageUri">pref_imageUri</string>
+</resources>
